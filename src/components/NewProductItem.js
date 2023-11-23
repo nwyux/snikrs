@@ -39,7 +39,7 @@ export default function ProductItem() {
                     <img
                       src={item.img}
                       alt={item.name}
-                      className="h-full mx-auto"
+                      className=" mx-auto"
                     />
                   </Link>
 
