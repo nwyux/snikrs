@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        // 'homeDown' : "url('/src/img/Home/homeDown.png')",
+      },
       margin: {
         15: '4rem',
       },

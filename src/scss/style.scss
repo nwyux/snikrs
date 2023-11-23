@@ -22,10 +22,25 @@
     @apply bg-noir rounded;
 }
 
+::-webkit-scrollbar-track {
+    @apply bg-blanc;
+}
+
+::selection {
+    @apply bg-zinc-500;
+}
+
 .bgCard{
     background-image: url("../img/Home/bghome.png");
     background-size: cover;
     background-size: 110% 110%;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.homeDown{
+    background-image: url("../img/Home/homeDown.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
 }
