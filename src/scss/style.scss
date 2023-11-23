@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "Archivo Black";
     src: url("https://fonts.googleapis.com/css?family=Archivo+Black");
@@ -30,7 +34,7 @@
     @apply bg-zinc-500;
 }
 
-.bgCard{
+.bgCard {
     background-image: url("../img/Home/bghome.png");
     background-size: cover;
     background-size: 110% 110%;
@@ -38,9 +42,9 @@
     background-position: center;
 }
 
-.homeDown{
+.homeDown {
     background-image: url("../img/Home/homeDown.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
 }
