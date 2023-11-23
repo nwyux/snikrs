@@ -43,7 +43,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-blanc text-noir py-4 px-4  sm:px-0 border-b-2 border-noir items-center sticky top-0 left-0 right-0 ">
+      <div className="bg-blanc text-noir py-4 px-4  sm:px-0 border-b-2 border-noir items-center sticky top-0 left-0 right-0 z-10">
         <div className="hidden container bg-blanc mx-auto md:flex justify-around align-middle items-center">
           <Link to="/" className="text-3xl font-archivo">
             SNIKRS
