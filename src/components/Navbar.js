@@ -43,12 +43,12 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-blanc text-noir border-b-2 border-noir py-4 px-4 sm:px-0">
-        <div className="hidden container mx-auto md:flex justify-around align-middle items-center">
+      <div className="bg-blanc text-noir py-4 px-4  sm:px-0 border-b-2 border-noir items-center sticky top-0 left-0 right-0 ">
+        <div className="hidden container bg-blanc mx-auto md:flex justify-around align-middle items-center">
           <Link to="/" className="text-3xl font-archivo">
             SNIKRS
           </Link>
-          <ul className="flex text-noir lg:gap-12 font-alata">
+          <ul className="flex text-noir lg:gap-12 font-alata items-center">
             <li className="mr-6">
               <NavLink
                 to="/categories"
@@ -82,9 +82,9 @@ export default function Navbar() {
               </NavLink>
             </li>
           </ul>
-          <NavLink to="/cart" className="text-3xl font-bold">
+          <Link to="/cart" className="text-3xl font-bold">
             <ShoppingBag />
-          </NavLink>
+          </Link>
         </div>
 
         <div className="container mx-auto md:hidden flex justify-between items-center relative">
