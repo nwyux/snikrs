@@ -43,16 +43,16 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-jaune text-bleufonce py-4 px-4 sm:px-0">
+      <div className="bg-blanc text-noir border-b-2 border-noir py-4 px-4 sm:px-0">
         <div className="hidden container mx-auto md:flex justify-around align-middle items-center">
           <Link to="/" className="text-3xl font-archivo">
             SNIKRS
           </Link>
-          <ul className="flex text-bleufonce lg:gap-12 font-alata">
+          <ul className="flex text-noir lg:gap-12 font-alata">
             <li className="mr-6">
               <NavLink
                 to="/categories"
-                className="text-bleufonce hover:underline"
+                className="text-noir hover:underline"
               >
                 Categories
               </NavLink>
@@ -60,7 +60,7 @@ export default function Navbar() {
             <li className="mr-6">
               <NavLink
                 to="/sneakers"
-                className="text-bleufonce hover:underline"
+                className="text-noir hover:underline"
               >
                 Sneakers
               </NavLink>
@@ -68,7 +68,7 @@ export default function Navbar() {
             <li className="mr-6">
               <NavLink
                 to="/promotions"
-                className="text-bleufonce hover:underline"
+                className="text-noir hover:underline"
               >
                 Promotions
               </NavLink>
@@ -76,7 +76,7 @@ export default function Navbar() {
             <li className="mr-6">
               <NavLink
                 to="/trending"
-                className="text-bleufonce hover:underline"
+                className="text-noir hover:underline"
               >
                 Trending
               </NavLink>
@@ -88,7 +88,7 @@ export default function Navbar() {
         </div>
 
         <div className="container mx-auto md:hidden flex justify-between items-center relative">
-          <div className="text-bleufonce">
+          <div className="text-noir">
             <Link to="/" className="text-3xl font-archivo">
               SNIKRS
             </Link>
@@ -101,7 +101,7 @@ export default function Navbar() {
             ref={menuRef}
             className={`${
               showMenu ? "translate-x-0" : "translate-x-full"
-            } fixed top-0 right-0 h-full font-alata bg-jaune text-bleufonce w-3/5 max-w-xs flex flex-col justify-center items-center p-6 gap-4 transition-transform duration-200`}
+            } fixed top-0 right-0 h-full font-alata bg-blanc text-noir w-3/5 max-w-xs flex flex-col justify-center items-center p-6 gap-4 transition-transform duration-200`}
           >
             <button
               className="absolute top-5 right-5 text-3xl font-bold"
@@ -112,39 +112,39 @@ export default function Navbar() {
 
             <NavLink
               to="/categories"
-              className="text-bleufonce hover:underline"
+              className="text-noir hover:underline"
               onClick={closeMenuOnClick}
             >
               Categories
             </NavLink>
-            <hr className="w-3/5 bg-bleufonce block h-0.5" />
+            <hr className="w-3/5 bg-noir block h-0.5" />
             <NavLink
               to="/sneakers"
-              className="text-bleufonce hover:underline"
+              className="text-noir hover:underline"
               onClick={closeMenuOnClick}
             >
               Sneakers
             </NavLink>
-            <hr className="w-3/5 bg-bleufonce block h-0.5" />
+            <hr className="w-3/5 bg-noir block h-0.5" />
             <NavLink
               to="/promotions"
-              className="text-bleufonce hover:underline"
+              className="text-noir hover:underline"
               onClick={closeMenuOnClick}
             >
               Promotions
             </NavLink>
-            <hr className="w-3/5 bg-bleufonce block h-0.5" />
+            <hr className="w-3/5 bg-noir block h-0.5" />
             <NavLink
               to="/trending"
-              className="text-bleufonce hover:underline"
+              className="text-noir hover:underline"
               onClick={closeMenuOnClick}
             >
               Trending
             </NavLink>
-            <hr className="w-3/5 bg-bleufonce block h-0.5" />
+            <hr className="w-3/5 bg-noir block h-0.5" />
             <NavLink
               to="/cart"
-              className="text-bleufonce hover:underline"
+              className="text-noir hover:underline"
               onClick={closeMenuOnClick}
             >
               <ShoppingBag />
