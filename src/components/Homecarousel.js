@@ -1,6 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import { Truck, PercentCircle, PackageCheck, HelpingHand} from "lucide-react";
 
 import React from 'react'
@@ -10,7 +10,7 @@ export default function Homecarousel() {
     <div>
         <section className="flex flex-col items-center justify-center w-screen text-noir font-archivo py-12">
               <Splide
-                className=" w-screen flex items-center py-6 justify-center border-y-4 border-noir uppercase"
+                className="w-screen flex items-center py-6 justify-center border-y-4 border-noir uppercase"
                 options={{
                   type: "loop",
                   drag: "free",
