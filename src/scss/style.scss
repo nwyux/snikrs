@@ -15,9 +15,17 @@
 }
 
 ::-webkit-scrollbar {
-    @apply w-2 bg-jaune;
+    @apply w-2 bg-blanc;
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-bleufonce rounded;
+    @apply bg-noir rounded;
+}
+
+.bgCard{
+    background-image: url("../img/Home/bghome.png");
+    // background-size: cover;
+    background-size: 110% 110%;
+    background-repeat: no-repeat;
+    background-position: center;
 }

@@ -13,8 +13,8 @@ module.exports = {
         15: '4rem',
       },
       colors: {
-        jaune: '#FBECB2',
-        rose: '#F8BDEB',
+        noir: '#131313',
+        blanc: '#F6F6F6',
         moon: {
           100: '#958B84',
           200: '#877F79',
