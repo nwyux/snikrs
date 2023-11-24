@@ -8,6 +8,10 @@ import img2 from '../img/sneakers/primary/blackphantom.webp'
 
 import img3 from '../img/sneakers/primary/yzy700_1.webp'
 
+import img4 from '../img/sneakers/primary/newb.webp'
+
+import img5 from '../img/sneakers/primary/dunkpink.webp'
+
 export const items = [
 
     {
@@ -43,7 +47,7 @@ export const items = [
         category: "Men",
         brand : "Nike",
         name: "Nike AJ1 Low Black Phantom",
-        price: 199.99,
+        price: 249.99,
         img: img2,
         otherImgs: [
             af1_1,
@@ -71,7 +75,7 @@ export const items = [
         category: "Men",
         brand : "Adidas",
         name: "Adidas Yeezy 700 Geode",
-        price: 199.99,
+        price: 219.99,
         img: img3,
         otherImgs: [
             af1_1,
@@ -88,6 +92,62 @@ export const items = [
             "43",
             "44",
             "45",
+        ],
+        isTrending: true,
+        isNew: true,
+        isSale: false,
+        isSoldOut: false,
+    },
+    {
+        id: 4,
+        category: "Men",
+        brand : "New Balance",
+        name: "New Balance 1906D",
+        price: 245,
+        img: img4,
+        otherImgs: [
+            af1_1,
+            af1_2,
+            af1_3,
+            af1_4,
+        ],
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia.",
+        color: "Black",
+        size: [
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+        ],
+        isTrending: true,
+        isNew: true,
+        isSale: false,
+        isSoldOut: false,
+    },
+    {
+        id: 5,
+        category: "Women",
+        brand : "Nike",
+        name: "Nike Dunk Low Barbie",
+        price: 149.99,
+        img: img5,
+        otherImgs: [
+            af1_1,
+            af1_2,
+            af1_3,
+            af1_4,
+        ],
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia.",
+        color: "Pink",
+        size: [
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
         ],
         isTrending: true,
         isNew: true,
