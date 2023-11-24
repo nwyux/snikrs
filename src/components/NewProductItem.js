@@ -4,14 +4,15 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { PackagePlus } from "lucide-react";
 
-export default function ProductItem() {
-
+export default function NewProductItem() {
   const filterItems = items.filter((item) => item.isNew === true);
 
   return (
     <>
       <div className="flex flex-col justify-center items-center">
-        <h1 className="text-xl font-bold py-2 flex gap-2 underline">NEW SNEAKERS <PackagePlus /></h1>
+        <h1 className="text-xl font-bold py-2 flex gap-2 underline">
+          NEW SNEAKERS <PackagePlus />
+        </h1>
         <Splide
           className="w-screen sm:w-4/6 flex items-center py-6 justify-center"
           options={{
@@ -32,19 +33,30 @@ export default function ProductItem() {
           }}
         >
           {filterItems.map((item) => (
-            <SplideSlide key={item.id} className="w-full sm:max-w-none max-h-lg font-horizonbig">
+            <SplideSlide
+              key={item.id}
+              className="w-full sm:max-w-none max-h-lg font-horizonbig"
+            >
               <div className="flex justify-center items-center ">
                 <div className="flex flex-col w-4/6 sm:w-auto justify-center items-center border-2 border-noir rounded hover:bg-zinc-200">
-                  <Link onClick={() => window.top(0,0)} to={`/sneakers/${item.id}`} className="sm:w-80">
-                    <img
-                      src={item.img}
-                      alt={item.name}
-                      className=" mx-auto"
-                    />
+                  <Link
+                    onClick={() => window.top(0, 0)}
+                    to={`/sneakers/${item.id}`}
+                    className="sm:w-80"
+                  >
+                    <img src={item.img} alt={item.name} className=" mx-auto" />
                   </Link>
 
                   <div className="flex flex-col justify-center items-center">
-                    <h1 className="text-sm text-center sm:text-xl font-bold hover:underline">{item.name}</h1>
+                    <Link
+                      onClick={() => window.top(0, 0)}
+                      to={`/sneakers/${item.id}`}
+                      className="sm:w-80"
+                    >
+                      <h1 className="text-sm text-center sm:text-xl font-bold hover:underline">
+                        {item.name}
+                      </h1>
+                    </Link>
                     <h2 className="text-md text-zinc-500 sm:text-lg">
                       {item.category}'s shoes
                     </h2>

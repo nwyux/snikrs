@@ -51,10 +51,10 @@ export default function Navbar() {
           <ul className="flex text-noir lg:gap-12 font-alata items-center">
             <li className="mr-6">
               <NavLink
-                to="/categories"
+                to="/comingsoon"
                 className="text-noir hover:underline"
               >
-                Categories
+                Coming soon
               </NavLink>
             </li>
             <li className="mr-6">
@@ -111,11 +111,11 @@ export default function Navbar() {
             </button>
 
             <NavLink
-              to="/categories"
+              to="/comingsoon"
               className="text-noir hover:underline"
               onClick={closeMenuOnClick}
             >
-              Categories
+              Coming soon
             </NavLink>
             <hr className="w-3/5 bg-noir block h-0.5" />
             <NavLink

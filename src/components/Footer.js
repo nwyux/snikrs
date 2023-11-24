@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="flex justify-content items-center align-middle w-full static bottom-0 left-0 right-0 z-10">
+    <div className="flex justify-content items-center align-middle w-full static bottom-0 left-0 right-0 z-10 border-t-2 border-noir">
       <div className="flex px-4 sm:px-12 py-6 items-center justify-around sm:justify-between w-screen">
         <div className="flex flex-wrap sm:flex-nowrap w-44 sm:w-auto text-xs justify-center items-center align-middle gap-4">
           <Link

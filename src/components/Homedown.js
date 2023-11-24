@@ -3,7 +3,7 @@ import { Goal, Medal, Recycle } from "lucide-react";
 
 export default function Homedown() {
   return (
-    <div id="about" className="h-full flex flex-col justify-center mt-16 py-16 sm:px-12  border-y-2 border-noir">
+    <div id="about" className="h-full flex flex-col justify-center mt-16 py-16 sm:px-12  border-t-2 border-noir">
       <div className="homeDown font-archivo border-y-2 sm:border-4 mx-auto border-noir sm:rounded-lg sm:w-4/5 h-4/5 py-6 sm:py-12 px-2 sm:px-6 md:px-12 lg:px-24 sm:flex-row flex flex-col-reverse justify-center items-center">
         <div className="flex items-center max-w-xl">
           <img src={sneakers2} alt="Sneakers Clipart" className="" />

@@ -1,6 +1,6 @@
 import Homecard from "../components/Homecard"
 import Homecarousel from "../components/Homecarousel"
-import ProductItem from "../components/NewProductItem"
+import NewProductItem from "../components/NewProductItem"
 import Homedown from "../components/Homedown"
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <div className='bg-blanc h-full'>
         <Homecard />
         <Homecarousel />
-        <ProductItem />
+        <NewProductItem />
         <Homedown />
     </div>
   )

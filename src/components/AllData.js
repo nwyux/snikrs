@@ -1,16 +1,22 @@
 import img1 from '../img/sneakers/primary/airforce1.webp'
 import af1_1 from '../img/sneakers/secondary/airforce1_1.webp'
 import af1_2 from '../img/sneakers/secondary/airforce1_2.webp'
-import af1_3 from '../img/sneakers/secondary/airforce1_3.webp'
-import af1_4 from '../img/sneakers/secondary/airforce1_4.webp'
 
 import img2 from '../img/sneakers/primary/blackphantom.webp'
+import aj1bf_1 from '../img/sneakers/secondary/aj1bf_1.webp'
+import aj1bf_2 from '../img/sneakers/secondary/aj1bf_2.webp'
 
 import img3 from '../img/sneakers/primary/yzy700_1.webp'
+import yzy1_1 from '../img/sneakers/secondary/yzy1_1.webp'
+import yzy1_2 from '../img/sneakers/secondary/yzy1_2.webp'
 
 import img4 from '../img/sneakers/primary/newb.webp'
+import nb1_1 from '../img/sneakers/secondary/nb1_1.webp'
+import nb1_2 from '../img/sneakers/secondary/nb1_2.webp'
 
 import img5 from '../img/sneakers/primary/dunkpink.webp'
+import dunk1_1 from '../img/sneakers/secondary/dunk1_1.webp'
+import dunk1_2 from '../img/sneakers/secondary/dunk1_2.webp'
 
 export const items = [
 
@@ -24,8 +30,6 @@ export const items = [
         otherImgs: [
             af1_1,
             af1_2,
-            af1_3,
-            af1_4,
         ],
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia.",
         color: "White",
@@ -41,6 +45,7 @@ export const items = [
         isNew: false,
         isSale: false,
         isSoldOut: false,
+        isAvailable: true,
     },
     {
         id: 2,
@@ -50,12 +55,10 @@ export const items = [
         price: 249.99,
         img: img2,
         otherImgs: [
-            af1_1,
-            af1_2,
-            af1_3,
-            af1_4,
+            aj1bf_1,
+            aj1bf_2,
         ],
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia.",
+        description: "Nike And Travis Scoot are back with their emblematic collaboration on the Air Jordan 1. Here in a new, most dark.",
         color: "Black",
         size: [
             "40",
@@ -69,6 +72,7 @@ export const items = [
         isNew: true,
         isSale: false,
         isSoldOut: false,
+        isAvailable: true,
     },
     {
         id: 3,
@@ -78,10 +82,8 @@ export const items = [
         price: 219.99,
         img: img3,
         otherImgs: [
-            af1_1,
-            af1_2,
-            af1_3,
-            af1_4,
+            yzy1_1,
+            yzy1_2,
         ],
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia.",
         color: "Geode",
@@ -97,6 +99,7 @@ export const items = [
         isNew: true,
         isSale: false,
         isSoldOut: false,
+        isAvailable: true,
     },
     {
         id: 4,
@@ -106,10 +109,8 @@ export const items = [
         price: 245,
         img: img4,
         otherImgs: [
-            af1_1,
-            af1_2,
-            af1_3,
-            af1_4,
+            nb1_1,
+            nb1_2,
         ],
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia.",
         color: "Black",
@@ -125,6 +126,7 @@ export const items = [
         isNew: true,
         isSale: false,
         isSoldOut: false,
+        isAvailable: true,
     },
     {
         id: 5,
@@ -134,10 +136,8 @@ export const items = [
         price: 149.99,
         img: img5,
         otherImgs: [
-            af1_1,
-            af1_2,
-            af1_3,
-            af1_4,
+            dunk1_1,
+            dunk1_2,
         ],
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia.",
         color: "Pink",
@@ -153,6 +153,7 @@ export const items = [
         isNew: true,
         isSale: false,
         isSoldOut: false,
+        isAvailable: true,
     },
 
 ]
