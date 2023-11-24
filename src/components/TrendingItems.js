@@ -2,34 +2,35 @@ import { items } from "./AllData";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-export default function ProductItem() {
+export default function TrendingItems() {
   const [allItems, setAllItems] = useState("");
   const [selectedBrand, setSelectedBrand] = useState("Brands");
   const [selectedPrice, setSelectedPrice] = useState("price");
 
-  useEffect(() => {
-    setAllItems("");
-  }, []);
+    useEffect(() => {
+        setAllItems("");
+    }, []);
+
 
   function filterItems() {
     const filteredItems = items.filter((item) => {
-      const titleMatch = item.name
-        .toLowerCase()
-        .includes(allItems.toLowerCase());
+      const titleMatch = item.name.toLowerCase().includes(allItems.toLowerCase());
 
       const brandMatch =
-        selectedBrand === "Brands" ||
-        item.brand.toLowerCase().includes(selectedBrand.toLowerCase());
+      selectedBrand === "Brands" ||
+      item.brand.toLowerCase().includes(selectedBrand.toLowerCase());
 
-      return titleMatch && brandMatch;
-    });
+      const isTrending = item.isTrending === true;
+    return titleMatch && brandMatch && isTrending;
 
-    if (selectedPrice === "Higher") {
-      filteredItems.sort((a, b) => new Date(b.price) - new Date(a.price));
-    } else if (selectedPrice === "Lower") {
-      filteredItems.sort((a, b) => new Date(a.price) - new Date(b.price));
-    }
+  });
 
+  if (selectedPrice === "Higher") {
+    filteredItems.sort((a, b) => new Date(b.price) - new Date(a.price));
+  } else if (selectedPrice === "Lower") {
+    filteredItems.sort((a, b) => new Date(a.price) - new Date(b.price));
+  }
+  
     return filteredItems;
   }
 
@@ -76,8 +77,14 @@ export default function ProductItem() {
           <div className="flex flex-col justify-center items-center">
             <div className="flex justify-center items-center flex-wrap gap-6 py-6 max-w-3xl">
               {filteredItems.map((item) => (
-                <div key={item.id} className="flex justify-center items-center">
-                  <div className="flex flex-col w-4/6 py-4 sm:w-auto justify-center items-center border-2 border-noir rounded hover:bg-zinc-200">
+                <div
+                  key={item.id}
+                  className="flex justify-center items-center"
+                >
+                  <div className="flex flex-col w-4/6 pb-4 sm:w-auto justify-center items-center border-2 border-noir rounded hover:bg-zinc-200">
+                  <div className="flex justify-center text-blanc items-center w-full top-0 bg-noir py-2 font-alata">
+                      TRENDING NOW 🔥
+                    </div>
                     <Link
                       onClick={() => window.top(0, 0)}
                       to={`/sneakers/${item.id}`}
@@ -103,38 +110,30 @@ export default function ProductItem() {
                       <h2 className="text-md text-zinc-500 sm:text-lg">
                         {item.category}'s shoes
                       </h2>
-                      {item.isSoldOut ? (
-                        <h2 className="text-md sm:text-lg text-red-500">
-                          Unavailable
-                        </h2>
-                      ) : (
-                        <h2 className="text-md sm:text-lg text-green-500">
-                          Available
-                        </h2>
-                      )}
-                      {item.isSale ? (
-                        <h2 className="text-md flex sm:text-lg">
-                          {item.color} |{" "}
-                          <p className="line-through px-2">{item.price}$</p>{" "}
-                          {(Number(item.price) * 0.8).toFixed(2)}$
-                        </h2>
-                      ) : (
-                        <h2 className="text-md sm:text-lg">
-                          {item.color} | {item.price}$
-                        </h2>
-                      )}
+                      {item.isAvailable ? (
+                    <h2 className="text-md sm:text-lg text-green-500">
+                        Available
+                    </h2>
+                ) : (
+                    <h2 className="text-md sm:text-lg text-red-500">
+                        Unavailable
+                    </h2>
+                )}
+                      <h2 className="text-md sm:text-lg">
+                        {item.color} | {item.price}$
+                      </h2>
                     </div>
 
                     <div className="flex justify-center items-center gap-2 py-2">
-                      {item.isSoldOut ? (
+                      {item.isAvailable ? (
+                        <button className="bg-noir text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs hover:bg-zinc-700">
+                          ADD TO CART
+                        </button>
+                      ) : (
                         <button
                           className="bg-zinc-500 text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs line-through"
                           disabled
                         >
-                          ADD TO CART
-                        </button>
-                      ) : (
-                        <button className="bg-noir text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs hover:bg-zinc-700">
                           ADD TO CART
                         </button>
                       )}
@@ -165,42 +164,42 @@ export default function ProductItem() {
   return (
     <>
       <div className="flex flex-col justify-center items-center">
-        <h1 className="text-xl font-bold flex gap-2 font-alata underline py-4">
-          Every Sneakers We Have!
+      <h1 className="text-xl font-bold flex gap-2 font-alata underline py-4">
+          Trending Sneakers!
         </h1>
         {searchBar()}
         <div className="flex justify-center align-items">
-          <div className="flex justify-center text-center">
-            <form className="flex gap-x-2">
-              <select
-                className="focus:outline-none rounded-sm w-26 sm:w-56 mb-3 bg-blanc"
-                value={selectedPrice}
-                onChange={(e) => setSelectedPrice(e.target.value)}
-              >
-                <option value="price" defaultValue="price">
-                  Price
-                </option>
-                <option value="Higher">Higher to lower</option>
-                <option value="Lower">Lower to higher</option>
-              </select>
+            <div className="flex justify-center text-center">
+              <form className="flex gap-x-2">
+                <select
+                  className="focus:outline-none rounded-sm w-26 sm:w-56 mb-3 bg-blanc"
+                  value={selectedPrice}
+                  onChange={(e) => setSelectedPrice(e.target.value)}
+                >
+                  <option value="price" defaultValue="price">
+                    Price
+                  </option>
+                  <option value="Higher">Higher to lower</option>
+                  <option value="Lower">Lower to higher</option>
+                </select>
 
-              <select
-                className="focus:outline-none rounded-sm w-26 sm:w-56 mb-3 bg-blanc"
-                value={selectedBrand}
-                onChange={(e) => {
-                  setSelectedBrand(e.target.value);
-                }}
-              >
-                <option value="Brands" defaultValue="Brands">
-                  Brands
-                </option>
-                <option value="Nike">Nike</option>
-                <option value="Adidas">Adidas</option>
-                <option value="New Balance">New Balance</option>
-              </select>
-            </form>
+                <select
+                  className="focus:outline-none rounded-sm w-26 sm:w-56 mb-3 bg-blanc"
+                  value={selectedBrand}
+                  onChange={(e) => {
+                    setSelectedBrand(e.target.value);
+                  }}
+                >
+                  <option value="Brands" defaultValue="Brands">
+                    Brands
+                  </option>
+                  <option value="Nike">Nike</option>
+                  <option value="Adidas">Adidas</option>
+                  <option value="New Balance">New Balance</option>
+                </select>
+              </form>
+            </div>
           </div>
-        </div>
         {displayItems()}
       </div>
     </>
