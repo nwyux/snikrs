@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Notfound from './components/Notfound';
 import Productpage from './components/Productpage';
 import ProductItem from './components/ProductItem';
 
@@ -15,7 +16,7 @@ function App() {
 
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="*" element={<h1>404</h1>} />
+      <Route path="*" element={<Notfound />} />
       <Route path="/about" element={<About />} />
       <Route path="/sneakers" element={<ProductItem />} />
       <Route path="/sneakers/:id" element={<Productpage/>} />

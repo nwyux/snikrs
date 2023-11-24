@@ -71,7 +71,7 @@ export default function Productpage() {
               </div>
             </div>
             <div className="flex justify-center items-center">
-              <div className="flex flex-col justify-center items-center gap-6">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <h1 className="text-xl text-center sm:text-3xl font-archivo">
                   {product.name}
                 </h1>
