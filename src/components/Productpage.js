@@ -40,8 +40,8 @@ export default function Productpage() {
   }
 
   return (
-    <div>
-      <div className="flex py-4 px-2 sm:px-36 items-center">
+    <div className="w-full py-8">
+      <div className="flex pb-4 px-2 sm:px-36 items-center">
         <Link
           to="/sneakers"
           className="text-xl font-alata before:content-['←'] hover:underline"
@@ -50,11 +50,11 @@ export default function Productpage() {
         </Link>
       </div>
       {product && (
-        <div className="container mx-auto h-screen items-center">
-          <div className="flex flex-col md:flex-row">
+        <div className="h-full items-center flex justify-center">
+          <div className="flex flex-col lg:flex-row sm:gap-6 justify-center max-w-6xl">
             <div className="flex flex-col justify-center items-center gap-2">
-              <div className="flex-1 w-4/6">
-                <img src={mainImg} alt={product.name} />
+              <div className="">
+                <img src={mainImg} alt={product.name} className="bg-zinc-100"/>
               </div>
               <div className="flex justify-center">
                 <div className="flex justify-center items-center gap-2 w-36 sm:w-48">
@@ -65,14 +65,15 @@ export default function Productpage() {
                       alt={product.name}
                       onMouseOver={() => changeMainImg(img)}
                       onMouseOut={resetMainImg}
+                      className="bg-zinc-100"                      
                     />
                   ))}
                 </div>
               </div>
             </div>
-            <div className="flex justify-center items-center">
-              <div className="flex flex-col justify-center items-center gap-4">
-                <h1 className="text-xl text-center sm:text-3xl font-archivo">
+            <div className="flex mx-auto items-center sm:bg-zinc-100 sm:border-2 sm:rounded sm:border-zinc-200 py-6 sm:w-4/6 lg:w-2/6">
+              <div className="flex flex-col items-center gap-4">
+                <h1 className="text-xl text-center sm:text-xl lg:text-2xl xl:text-3xl font-archivo">
                   {product.name}
                 </h1>
                 <div className="flex justify-center items-center gap-2">
@@ -90,8 +91,8 @@ export default function Productpage() {
                 )}
                 </div>
                 <div className="relative flex items-center gap-4">
-                  <select className="bg-blanc text-noir py-2 px-2 sm:px-4 rounded-lg text-xs" onChange={handleSize}>
-                    <option value="0">Select a size</option>
+                  <select className="bg-blanc text-center text-noir border-2 border-noir py-2 px-2 sm:px-4 rounded-lg text-xs" onChange={handleSize}>
+                    <option value="0" aria-required>Select a size</option>
                     {product.size.map((size, index) => (
                       <option key={index} value={size}>
                         {size}
@@ -99,6 +100,7 @@ export default function Productpage() {
                     ))}
                   </select>
 
+                  <div className="flex justify-center items-center">
                   <button
                     type="button"
                     id="decrement-button"
@@ -152,18 +154,19 @@ export default function Productpage() {
                     </svg>
                   </button>
                 </div>
+                </div>
 
                 <p className="text-xs sm:text-sm text-center w-56 sm:w-4/6 font-alata">
                   {product.description}
                 </p>
                 <div className="flex justify-center items-center gap-6">
                   <p className="text-xl font-alata">{product.price}$</p>
-                  {product.isAvailable ? (
+                  {product.isAvailable && size > 0 ? (
                     <button className="bg-noir text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs hover:bg-zinc-700">
                       ADD TO CART
                     </button>
                     ) : (
-                    <button className="bg-zinc-500 text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs line-through" disabled>
+                    <button className="bg-zinc-500 text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs" disabled>
                       ADD TO CART
                     </button>
                     )}

@@ -93,6 +93,15 @@ export default function ProductItem() {
                       <h2 className="text-md text-zinc-500 sm:text-lg">
                         {item.category}'s shoes
                       </h2>
+                      {item.isAvailable ? (
+                    <h2 className="text-md sm:text-lg text-green-500">
+                        Available
+                    </h2>
+                ) : (
+                    <h2 className="text-md sm:text-lg text-red-500">
+                        Unavailable
+                    </h2>
+                )}
                       <h2 className="text-md sm:text-lg">
                         {item.color} | {item.price}$
                       </h2>
