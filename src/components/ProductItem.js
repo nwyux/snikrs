@@ -11,9 +11,9 @@ export default function ProductItem() {
         <h1 className="text-xl font-bold py-2 flex gap-2 underline">
           Every Sneakers We Have!
         </h1>
-        <div className="flex justify-center items-center flex-wrap gap-6 max-w-3xl">
-          {filterItems.map((item) => (
-            <div className="flex justify-center items-center ">
+        <div className="flex justify-center items-center flex-wrap gap-6 py-6 max-w-3xl">
+          {items.map((item) => (
+            <div key={item.id} className="flex justify-center items-center ">
               <div className="flex flex-col w-4/6 sm:w-auto justify-center items-center border-2 border-noir rounded hover:bg-zinc-200">
                 <Link
                   onClick={() => window.top(0, 0)}
@@ -42,12 +42,26 @@ export default function ProductItem() {
                 </div>
 
                 <div className="flex justify-center items-center gap-2 py-2">
-                  <button className="bg-noir text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs hover:bg-zinc-700">
-                    ADD TO CART
-                  </button>
-                  <button className="border-2 border-noir hover:no-underline text-noir py-2 px-2 sm:px-4 rounded-lg text-xs transition-all duration-150 hover:bg-noir hover:text-blanc">
+                {item.isAvailable ? (
+                    <button className="bg-noir text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs hover:bg-zinc-700">
+                      ADD TO CART
+                    </button>
+                    ) : (
+                    <button className="bg-zinc-500 text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs line-through" disabled>
+                      ADD TO CART
+                    </button>
+                    )}
+
+                {item.isAvailable ? (
+                    <button className="border-2 border-noir hover:no-underline text-noir py-2 px-2 sm:px-4 rounded-lg text-xs transition-all duration-150 hover:bg-noir hover:text-blanc">
                     BUY NOW
-                  </button>
+                    </button>
+                    ) : (
+                    <button className="border-2 border-noir text-noir py-2 px-2 sm:px-4 rounded-lg text-xs line-through" disabled>
+                      BUY NOW
+                    </button>
+                    )}
+                  
                 </div>
               </div>
             </div>

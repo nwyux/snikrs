@@ -72,7 +72,7 @@ export const items = [
         isNew: true,
         isSale: false,
         isSoldOut: false,
-        isAvailable: true,
+        isAvailable: false,
     },
     {
         id: 3,
