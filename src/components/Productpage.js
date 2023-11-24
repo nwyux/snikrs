@@ -51,7 +51,7 @@ export default function Productpage() {
       </div>
       {product && (
         <div className="container mx-auto h-screen items-center">
-          <div className="flex flex-col sm:flex-row">
+          <div className="flex flex-col md:flex-row">
             <div className="flex flex-col justify-center items-center gap-2">
               <div className="flex-1 w-4/6">
                 <img src={mainImg} alt={product.name} />
