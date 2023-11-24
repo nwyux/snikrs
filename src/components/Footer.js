@@ -12,16 +12,16 @@ export default function Footer() {
             Home
           </Link>
           <Link
-            to="/categories"
-            className="text-noir font-archivo hover:underline"
-          >
-            Categories
-          </Link>
-          <Link
             to="/sneakers"
             className="text-noir font-archivo hover:underline"
           >
             Sneakers
+          </Link>
+          <Link
+            to="/promotions"
+            className="text-noir font-archivo hover:underline"
+          >
+            Promotions
           </Link>
           <Link
             to="/trending"
@@ -30,10 +30,10 @@ export default function Footer() {
             Trending
           </Link>
           <Link
-            to="/legals"
+            to="/cart"
             className="text-noir font-archivo hover:underline"
           >
-            Legals
+            Cart
           </Link>
           <Link
             to="/contact"

@@ -66,9 +66,12 @@ export default function NewProductItem() {
                   </div>
 
                   <div className="flex justify-center items-center gap-2 py-2">
-                    <button className="bg-noir text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs hover:bg-zinc-700">
-                      ADD TO CART
-                    </button>
+                    <Link
+                      to={`/sneakers/${item.id}`}
+                      className="bg-noir text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs hover:bg-zinc-700"
+                    >
+                      LOOK CLOSER
+                    </Link>
                     <button className="border-2 border-noir hover:no-underline text-noir py-2 px-2 sm:px-4 rounded-lg text-xs transition-all duration-150 hover:bg-noir hover:text-blanc">
                       BUY NOW
                     </button>

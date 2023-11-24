@@ -125,16 +125,16 @@ export default function PromotionsItems() {
 
                     <div className="flex justify-center items-center gap-2 py-2">
                       {item.isAvailable ? (
-                        <button className="bg-noir text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs hover:bg-zinc-700">
-                          ADD TO CART
-                        </button>
+                        <Link to={`/sneakers/${item.id}`} className="bg-noir text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs hover:bg-zinc-700">
+                          LOOK CLOSER
+                        </Link>
                       ) : (
-                        <button
+                        <Link
                           className="bg-zinc-500 text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs line-through"
                           disabled
                         >
-                          ADD TO CART
-                        </button>
+                          LOOK CLOSER
+                        </Link>
                       )}
 
                       {item.isAvailable ? (

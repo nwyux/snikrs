@@ -126,28 +126,20 @@ export default function ProductItem() {
                     </div>
 
                     <div className="flex justify-center items-center gap-2 py-2">
-                      {item.isSoldOut ? (
-                        <button
-                          className="bg-zinc-500 text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs line-through"
-                          disabled
-                        >
-                          ADD TO CART
-                        </button>
-                      ) : (
-                        <button className="bg-noir text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs hover:bg-zinc-700">
-                          ADD TO CART
-                        </button>
-                      )}
 
-                      {item.isAvailable ? (
-                        <button className="border-2 border-noir hover:no-underline text-noir py-2 px-2 sm:px-4 rounded-lg text-xs transition-all duration-150 hover:bg-noir hover:text-blanc">
-                          BUY NOW
-                        </button>
-                      ) : (
+                        <Link to={`/sneakers/${item.id}`} className="bg-noir text-blanc py-2 px-2 sm:px-4 rounded-lg text-xs hover:bg-zinc-700">
+                        LOOK CLOSER
+                      </Link>
+
+                      {item.isSoldOut ? (
                         <button
                           className="border-2 border-noir text-noir py-2 px-2 sm:px-4 rounded-lg text-xs line-through"
                           disabled
                         >
+                          BUY NOW
+                        </button>
+                      ) : (
+                        <button className="border-2 border-noir hover:no-underline text-noir py-2 px-2 sm:px-4 rounded-lg text-xs transition-all duration-150 hover:bg-noir hover:text-blanc">
                           BUY NOW
                         </button>
                       )}
