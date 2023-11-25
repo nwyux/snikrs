@@ -69,7 +69,7 @@ export const items = [
             "45",
         ],
         isTrending: false,
-        isNew: true,
+        isNew: false,
         isSale: false,
         isSoldOut: true,
         isAvailable: true,

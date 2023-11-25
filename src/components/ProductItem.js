@@ -79,7 +79,6 @@ export default function ProductItem() {
                 <div key={item.id} className="flex justify-center items-center">
                   <div className="flex flex-col w-4/6 py-4 sm:w-auto justify-center items-center border-2 border-noir rounded hover:bg-zinc-200">
                     <Link
-                      onClick={() => window.top(0, 0)}
                       to={`/sneakers/${item.id}`}
                       className="sm:w-80"
                     >
@@ -92,7 +91,6 @@ export default function ProductItem() {
 
                     <div className="flex flex-col justify-center items-center">
                       <Link
-                        onClick={() => window.top(0, 0)}
                         to={`/sneakers/${item.id}`}
                         className="sm:w-80"
                       >

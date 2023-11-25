@@ -1,11 +1,14 @@
 import { NavLink, Link } from "react-router-dom";
 import { ShoppingBag, Menu, X } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+import { CartContext } from "./Productpage";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [cart, setCart] = useState(false);
   const menuRef = useRef(null);
+
+  const { cartItem } = useContext(CartContext);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -83,7 +86,17 @@ export default function Navbar() {
             </li>
           </ul>
           <Link to="/cart" className="text-3xl font-bold">
-            <ShoppingBag />
+            {cartItem.length > 0 ? (
+              <div className="flex justify-center items-center">
+                <ShoppingBag />
+                <div className="bg-noir fixed ml-6 mt-6 text-blanc rounded-full w-5 h-5 flex justify-center items-center text-xs">
+                  {cartItem.length}
+                </div>
+              </div>
+            ) : (
+              <ShoppingBag />
+            )
+              }
           </Link>
         </div>
 
@@ -142,13 +155,19 @@ export default function Navbar() {
               Trending
             </NavLink>
             <hr className="w-3/5 bg-noir block h-0.5" />
-            <NavLink
-              to="/cart"
-              className="text-noir hover:underline"
-              onClick={closeMenuOnClick}
-            >
+            <Link to="/cart" className="text-3xl font-bold" onClick={closeMenuOnClick}>
+            {cartItem.length > 0 ? (
+              <div className="flex justify-center items-center">
+                <ShoppingBag />
+                <div className="bg-noir fixed ml-6 mt-6 text-blanc rounded-full w-5 h-5 flex justify-center items-center text-xs">
+                  {cartItem.length}
+                </div>
+              </div>
+            ) : (
               <ShoppingBag />
-            </NavLink>
+            )
+              }
+          </Link>
           </div>
         </div>
       </div>

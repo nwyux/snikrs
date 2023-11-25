@@ -85,7 +85,6 @@ export default function PromotionsItems() {
                       SALES -20%
                     </div>
                     <Link
-                      onClick={() => window.top(0, 0)}
                       to={`/sneakers/${item.id}`}
                       className="sm:w-80"
                     >
@@ -98,7 +97,7 @@ export default function PromotionsItems() {
 
                     <div className="flex flex-col justify-center items-center">
                       <Link
-                        onClick={() => window.top(0, 0)}
+
                         to={`/sneakers/${item.id}`}
                         className="sm:w-80"
                       >
@@ -119,7 +118,7 @@ export default function PromotionsItems() {
                     </h2>
                 )}
                       <h2 className="text-md flex sm:text-lg">
-                      {item.color} | <p className="line-through px-2">{item.price}$</p> {(Number(item.price) * 0.8).toFixed(2)}$
+                      {item.color} | <p className="line-through px-2">${item.price}</p> ${(Number(item.price) * 0.8).toFixed(2)}
                       </h2>
                     </div>
 

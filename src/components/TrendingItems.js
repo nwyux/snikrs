@@ -86,7 +86,6 @@ export default function TrendingItems() {
                       TRENDING NOW 🔥
                     </div>
                     <Link
-                      onClick={() => window.top(0, 0)}
                       to={`/sneakers/${item.id}`}
                       className="sm:w-80"
                     >
@@ -99,7 +98,6 @@ export default function TrendingItems() {
 
                     <div className="flex flex-col justify-center items-center">
                       <Link
-                        onClick={() => window.top(0, 0)}
                         to={`/sneakers/${item.id}`}
                         className="sm:w-80"
                       >
@@ -120,7 +118,7 @@ export default function TrendingItems() {
                     </h2>
                 )}
                       <h2 className="text-md sm:text-lg">
-                        {item.color} | {item.price}$
+                        {item.color} | ${item.price}
                       </h2>
                     </div>
 

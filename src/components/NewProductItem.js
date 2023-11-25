@@ -40,7 +40,7 @@ export default function NewProductItem() {
               <div className="flex justify-center items-center ">
                 <div className="flex flex-col w-4/6 sm:w-auto justify-center items-center border-2 border-noir rounded hover:bg-zinc-200">
                   <Link
-                    onClick={() => window.top(0, 0)}
+                    
                     to={`/sneakers/${item.id}`}
                     className="sm:w-80"
                   >
@@ -49,7 +49,7 @@ export default function NewProductItem() {
 
                   <div className="flex flex-col justify-center items-center">
                     <Link
-                      onClick={() => window.top(0, 0)}
+                      
                       to={`/sneakers/${item.id}`}
                       className="sm:w-80"
                     >
@@ -61,7 +61,7 @@ export default function NewProductItem() {
                       {item.category}'s shoes
                     </h2>
                     <h2 className="text-md sm:text-lg">
-                      {item.color} | {item.price}$
+                      {item.color} | ${item.price}
                     </h2>
                   </div>
 
