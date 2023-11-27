@@ -3,7 +3,6 @@ import "./scss/style.scss";
 import {Routes, Route} from "react-router-dom";
 import { useEffect, useState } from 'react';
 import Home from "./pages/Home";
-import About from "./pages/About";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Notfound from './components/Notfound';
@@ -49,7 +48,6 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="*" element={<Notfound />} />
-      <Route path="/about" element={<About />} />
       <Route path="/sneakers" element={<Sneakers />} />
       <Route path="/sneakers/:id" element={<Productpage/>} />
       <Route path="/promotions" element={<Promotions />} />
