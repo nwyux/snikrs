@@ -187,6 +187,7 @@ export default function ProductItem() {
                 <option value="Nike">Nike</option>
                 <option value="Adidas">Adidas</option>
                 <option value="New Balance">New Balance</option>
+                <option value="Jordan">Jordan</option>
               </select>
             </form>
           </div>
